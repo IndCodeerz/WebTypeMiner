@@ -1,0 +1,111 @@
+/* 
+J_...   = JavaScript
+H_...   = HTML
+...ID   = HTML id
+...CO   = Const
+...V    = Variable
+*/
+
+*{
+    user-select: none;
+}
+
+html, body {
+    height: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*transition: background-color 0.1s ease;*/
+    background-color: gray; /* Warna default */
+}
+
+#H_homeAreaID, #H_caveAreaID {
+    width: 100%;
+    height: 100%;
+}
+
+#H_oresID {
+    text-align: left;
+    border: solid;
+    margin-top: 50px;
+}
+
+#H_book {
+    z-index: 1;
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    position: fixed; 
+    height: 600px;
+    width: 252px;
+    transition: .5s;
+    background: pink;
+}
+
+#H_bookMarkID {
+    border:solid;
+    position: absolute;
+    width: 0; 
+    top: 20px;
+    left: 300px;
+    transition: .5s;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin: 0;
+}
+
+#H_bookMarkID label {
+    width: 200px;
+    padding: 5px;
+    font-size: 24px;
+    transition: .5s;
+    background: white;
+    outline: 2px dashed rgb(180, 146, 52);
+    margin: 8px 0;
+}
+
+input[type='radio'] + label:hover {
+   cursor: pointer;
+} 
+
+input[id='close'] + label {
+    margin-left: -240px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+#H_bookMarkID input:not(:checked) + label {
+    transform: translateX(-150px);
+}
+
+#H_bookMarkID input:hover + label {
+    transform: translateX(0px);
+}
+
+body:has(input[id='close']:checked) #H_book , body:has(input[id='close']:checked) #H_bookMarkID {
+    transform: translateX(-300px);
+} 
+
+#inv + label {
+    background: rgb(168, 10, 10);
+}
+
+#equ + label {
+    background: blue;
+}
+
+#jou + label {
+    background: rgb(4, 150, 4);
+}
+
+/*#H_wordInputID {
+    pointer-events: none;
+}*/

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTypeMiner</title>
+    <link rel="icon" href="media/WebTypeMiner.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1><u>WebTypeMiner</u></h1>
+
+        <div id="H_audioID">
+            <audio id="H_clickID" src="sfx/click.wav"></audio>
+            <audio id="H_swipeID" src="sfx/swipe.wav"></audio>
+            <audio id="H_pickaxeID" src="sfx/pickaxe.wav"></audio>
+            <audio id="H_rareClingID" src="sfx/rarecling.wav"></audio>
+            <audio id="H_timeoutID" src="sfx/timeout.wav"></audio>
+            <audio id="H_sellID" src="sfx/sell.wav"></audio>
+            <audio id="H_sellFailID" src="sfx/sellfail.wav"></audio>
+        </div>
+
+        <div id="H_book">
+            <input id='close' type="radio" name="bookmark" checked>
+            <label for="close">X</label>
+            
+            <div id="H_oresID" style="display: block;">
+                Stone: <span id="H_stoneID">0</span><br>
+                Copper: <span id="H_copperID">0</span><br>
+                Iron: <span id="H_ironID">0</span><br>
+                Lithium: <span id="H_lithiumID">0</span><br>
+                Silver: <span id="H_silverID">0</span><br>
+                Gold: <span id="H_goldID">0</span><br>
+                Diamond: <span id="H_diamondID">0</span><br>
+            </div>
+        </div>
+
+        <div id="H_bookMarkID">         
+            <input id='inv' type="radio" name="bookmark" >
+            <label for="inv">Inventory</label>
+            <input id='equ' type="radio" name="bookmark" >
+            <label for="equ">Equipment</label>
+            <input id='jou' type="radio" name="bookmark" >
+            <label for="jou">Journal</label>
+        </div>
+
+        <div id="H_homeAreaID">    
+            <!--<button id="H_sellButtonID">Sell Gold!</button>-->
+            <button id="H_gotoMarketButtonID">Go To Market</button>
+            <button id="H_enterCaveButtonID">Enter Cave</button>
+        </div>
+
+        <div id="H_marketAreaID" style="display: none;">
+            <p>Money: $<span id="H_moneyID">0</span></p>
+            <button onclick="sellOres('stone')">Sell Stone</button>
+            <button onclick="sellOres('copper')">Sell Copper</button>
+            <button onclick="sellOres('iron')">Sell Iron</button>
+            <button onclick="sellOres('lithium')">Sell Lithium</button>
+            <button onclick="sellOres('silver')">Sell Silver</button>
+            <button onclick="sellOres('gold')">Sell Gold</button>
+            <button onclick="sellOres('diamond')">Sell Diamond</button>
+            <p><button id="H_leaveMarketButtonID">Leave Market</button></p>
+        </div>
+
+        <div id="H_caveAreaID" style="display: none; color: whitesmoke;">
+            <p>Type this word: <span id="H_wordTargetID">example</span></p>
+            <p><input id="H_wordInputID" type="text" autocomplete="off"/></p>
+            <button id="H_leaveCaveButtonID">Leave Cave</button>
+        </div>
+
+        <p><span id="H_narratorID">Welcome to MineVille!</span></p>
+    
+    </div>
+
+    <!--Icon was taken from flaticon.com-->
+    <!--https://pinterest.com/pin/create/bookmarklet/?description=&is_video=%7Bvideo%7D&media=&url=https://www.flaticon.com/free-icon/pickaxe_2736404-->
+</body>
+</html>
